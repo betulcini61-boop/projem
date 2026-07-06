@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hucre Turu</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Hucre Turu">
+        <span class="brand-mark"></span>
+        <span data-i18n="brand">Hucre Turu</span>
+      </a>
+      <nav class="language-switch" aria-label="Language">
+        <button class="lang-button is-active" type="button" data-lang="tr">TR</button>
+        <button class="lang-button" type="button" data-lang="en">EN</button>
+      </nav>
+    </header>
+
+    <main class="home-shell">
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="home.eyebrow">Interaktif biyoloji gezisi</p>
+          <h1 id="home-title" data-i18n="home.title">Hangi hucreyi gezmek istersin?</h1>
+          <p class="lead" data-i18n="home.lead">
+            Prokaryot ve okaryot hucreleri karsilastir, yapilarini adim adim incele ve mini bilgi kartlariyla turu tamamla.
+          </p>
+        </div>
+
+        <div class="choice-grid" aria-label="Hucre turu secimi">
+          <a class="choice-card pro-card" href="pages/prokaryote.html">
+            <span class="choice-art pro-art" aria-hidden="true">
+              <span class="cell-ring"></span>
+              <span class="dna-thread"></span>
+              <span class="ribosome r1"></span>
+              <span class="ribosome r2"></span>
+              <span class="ribosome r3"></span>
+              <span class="tail"></span>
+            </span>
+            <span class="choice-content">
+              <span class="choice-label" data-i18n="home.prokaryote.label">Prokaryot</span>
+              <span class="choice-text" data-i18n="home.prokaryote.text">Cekirdeksiz, sade ve hizli hucre organizasyonu.</span>
+              <span class="choice-action" data-i18n="home.start">Tura basla</span>
+            </span>
+          </a>
+
+          <a class="choice-card eu-card" href="pages/eukaryote.html">
+            <span class="choice-art eu-art" aria-hidden="true">
+              <span class="cell-ring"></span>
+              <span class="nucleus"></span>
+              <span class="mito"></span>
+              <span class="golgi"></span>
+              <span class="vesicle v1"></span>
+              <span class="vesicle v2"></span>
+            </span>
+            <span class="choice-content">
+              <span class="choice-label" data-i18n="home.eukaryote.label">Okaryot</span>
+              <span class="choice-text" data-i18n="home.eukaryote.text">Cekirdekli, bol organelli ve katmanli hucre dunyasi.</span>
+              <span class="choice-action" data-i18n="home.start">Tura basla</span>
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
