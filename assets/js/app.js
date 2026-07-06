@@ -1,9 +1,25 @@
 (function () {
   var defaultLang = "tr";
-  var savedLang = localStorage.getItem("cellTourLang");
+  var savedLang = readSavedLang();
   var lang = savedLang || defaultLang;
   var page = document.body.dataset.page;
   var activeStep = 0;
+
+  function readSavedLang() {
+    try {
+      return localStorage.getItem("cellTourLang");
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveLang(nextLang) {
+    try {
+      localStorage.setItem("cellTourLang", nextLang);
+    } catch (error) {
+      return;
+    }
+  }
 
   function getPath(obj, path) {
     return path.split(".").reduce(function (value, key) {
@@ -13,7 +29,7 @@
 
   function setLanguage(nextLang) {
     lang = nextLang;
-    localStorage.setItem("cellTourLang", lang);
+    saveLang(lang);
     document.documentElement.lang = lang;
 
     document.querySelectorAll("[data-i18n]").forEach(function (node) {
